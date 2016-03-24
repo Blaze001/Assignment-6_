@@ -1,0 +1,42 @@
+import java.util.logging.Logger;
+
+/**
+ * 
+ */
+
+/**
+ * @author Mitchell VanEss
+ *
+ */
+public class TestLoggers {
+
+	/**
+	 * 
+	 */
+	public TestLoggers() {
+		// TODO Auto-generated constructor stub
+	}
+/**
+ * runs a test on each logger level
+ *
+ * @param logger the logger that needs testing
+ */
+	private static void testLogging(Logger logger) {
+		logger.error("The level is set to " + logger.getLevel());
+		logger.info("This is an info message");
+		logger.debug("This is a debug message");
+		logger.warning("This is a warning message");
+		logger.error("This an error message");
+		logger.warning("-----------------------------");
+		logger.warning("");
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Logger logger = new StandardLogger();
+	}
+
+}
