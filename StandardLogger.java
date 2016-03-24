@@ -8,8 +8,22 @@
  */
 public abstract class StandardLogger implements Logger1 {
 
+	Level level;
 	
-	
+	/**
+	 * @return the level
+	 */
+	public Level getLevel() {
+		return level;
+	}
+
+	/**
+	 * @param level the level to set
+	 */
+	public void setLevel(Level level) {
+		this.level = level;
+	}
+
 	/**
 	 * 
 	 */
@@ -17,13 +31,7 @@ public abstract class StandardLogger implements Logger1 {
 		// TODO Auto-generated constructor stub
 		setLevel(Level.WARN);
 	}
-	
-	
-	@Override
-	public void getLevel(String level) {
-		return;
-	}
-	
+
 	@Override
 	/**
 	 * @see Logger1#info
@@ -60,8 +68,7 @@ public abstract class StandardLogger implements Logger1 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
-
