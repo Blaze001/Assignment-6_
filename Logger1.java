@@ -6,32 +6,69 @@
  * @author Mitchell VanEss
  *
  */
+public abstract class StandardLogger implements Logger1 {
 
-public interface Logger1 {
-	void getLevel(String level);
-		// TODO Auto-generated method stub
-		
-	 void setLevel(Level level);
-		
-	/**
-	 * The info method prints the message when the level is set to INFO.
-	 * @param text
-	 */
-	void info(String text);
-	/**
-	 * The debug method prints the message when the level is INFO or DEBUG.
-	 * @param text
-	 */
-	void debug(String text);
-	/**
-	 * The warn method prints the message when the level is INFO, DEBUG or WARN.
-	 * @param text
-	 */
-	void warn(String text);
-	/**
-	 * The error method always prints the message when called.
-	 * @param text
-	 */
-	void error(String text);
+	Level level;
 	
+	/**
+	 * @return the level
+	 */
+	public Level getLevel() {
+		return level;
+	}
+
+	/**
+	 * @param level the level to set
+	 */
+	public void setLevel(Level level) {
+		this.level = level;
+	}
+
+	/**
+	 * 
+	 */
+	public StandardLogger() {
+		// TODO Auto-generated constructor stub
+		setLevel(Level.WARN);
+	}
+
+	@Override
+	/**
+	 * @see Logger1#info
+	 */
+	public void info(String text){
+		System.out.println("This is an info message");
+	}
+	
+	@Override
+	/**
+	 * @see Logger1#debug
+	 */
+	public void debug(String text){
+		System.out.println("This is a debug message");
+	}
+	
+	@Override
+	/**
+	 * @see Logger1#warn
+	 */
+	public void warn(String text){
+		System.out.println("This is a warning message");	
+	}
+	
+	@Override
+	/**
+	 * @see Logger1#error
+	 */
+	public void error(String text){
+		System.out.println("This is an error message");
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
 }
