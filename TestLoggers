@@ -21,14 +21,14 @@ public class TestLoggers {
  *
  * @param logger the logger that needs testing
  */
-	private static void testLogging(Logger logger) {
-		logger.error("The level is set to " + logger.getLevel());
-		logger.info("This is an info message");
-		logger.debug("This is a debug message");
-		logger.warning("This is a warning message");
-		logger.error("This an error message");
-		logger.warning("-----------------------------");
-		logger.warning("");
+	private static void testLogging(Logger1 logger1) {
+		logger1.error("The level is set to " + logger1.getLevel());
+		logger1.info("This is an info message");
+		logger1.debug("This is a debug message");
+		logger1.warn("This is a warning message");
+		logger1.error("This an error message");
+		logger1.warn("-----------------------------");
+		logger1.warn("");
 	}
 	
 	/**
@@ -36,7 +36,7 @@ public class TestLoggers {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Logger logger = new StandardLogger();
+		Logger1 logger1 = new StandardLogger(); //You will get error on this line (Fix the error)
 	}
 
 }
