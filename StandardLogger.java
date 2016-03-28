@@ -6,7 +6,7 @@
  * @author Mitchell VanEss
  *
  */
-public abstract class StandardLogger implements Logger1 {
+public class StandardLogger implements Logger1 {
 
 	Level level;
 	
@@ -37,7 +37,9 @@ public abstract class StandardLogger implements Logger1 {
 	 * @see Logger1#info
 	 */
 	public void info(String text){
-		System.out.println("This is an info message");
+		if (level == Level.INFO){
+		System.out.println(text);
+		}
 	}
 	
 	@Override
@@ -45,15 +47,19 @@ public abstract class StandardLogger implements Logger1 {
 	 * @see Logger1#debug
 	 */
 	public void debug(String text){
-		System.out.println("This is a debug message");
+		if (level == Level.INFO || level == Level.DEBUG){
+		System.out.println(text);
+		}
 	}
-	
 	@Override
 	/**
 	 * @see Logger1#warn
 	 */
 	public void warn(String text){
-		System.out.println("This is a warning message");	
+		if (level == Level.INFO || level == Level.DEBUG || level == Level.WARN) {
+			System.out.println(text);	
+		}
+		
 	}
 	
 	@Override
@@ -61,7 +67,7 @@ public abstract class StandardLogger implements Logger1 {
 	 * @see Logger1#error
 	 */
 	public void error(String text){
-		System.out.println("This is an error message");
+		System.out.println(text);
 	}
 	/**
 	 * @param args

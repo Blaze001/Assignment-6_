@@ -36,7 +36,8 @@ public class TestLoggers {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Logger1 logger1 = new StandardLogger();   //You will get error on this line (Fix the error)
+		Logger1 logger1 = new StandardLogger(); 
+		testLogging(logger1);
 	}
 
 }
