@@ -1,3 +1,4 @@
+import java.util.Date;
 import java.util.logging.Logger;
 
 /**
@@ -9,7 +10,7 @@ import java.util.logging.Logger;
  *
  */
 public class TestLoggers {
-
+	static java.util.Date date = new java.util.Date();
 	/**
 	 * 
 	 */
@@ -29,6 +30,14 @@ public class TestLoggers {
 		logger1.error("This an error message");
 		logger1.warn("-----------------------------");
 		logger1.warn("");
+		
+		logger1.error("[ERROR]	" + date + "	The level is set to " + logger1.getLevel());
+		logger1.info("[INFO]	" + date + "	This is an info message");
+		logger1.debug("[DEBUG]	" + date + 	 "	This is a debug message");
+		logger1.warn("[WARN]	" + date + "	This is a warning message");
+		logger1.error("[ERROR]	" + date + "	This an error message");
+		logger1.warn("	-----------------------------");
+		logger1.warn("");
 	}
 	
 	/**
@@ -37,7 +46,9 @@ public class TestLoggers {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Logger1 logger1 = new StandardLogger(); 
+		Logger1 logger2 = new DetailLogger();
 		testLogging(logger1);
+		//testLogging(logger2);
 	}
 
 }
