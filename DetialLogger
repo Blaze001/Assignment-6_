@@ -1,0 +1,45 @@
+public class DetailLogger extends StandardLogger {
+	
+	static java.util.Date date=new java.util.Date();
+	
+	public DetailLogger() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	/**
+	 * @see Logger1#info
+	 */
+	public void info(String text){
+		if (level == Level.INFO){
+		System.out.println(text);
+		}
+	}
+	
+	@Override
+	/**
+	 * @see Logger1#debug
+	 */
+	public void debug(String text){
+		if (level == Level.INFO || level == Level.DEBUG){
+		System.out.println(text);
+		}
+	}
+	@Override
+	/**
+	 * @see Logger1#warn
+	 */
+	public void warn(String text){
+		if (level == Level.INFO || level == Level.DEBUG || level == Level.WARN) {
+			System.out.println(text);	
+		}
+		
+	}
+	
+	@Override
+	/**
+	 * @see Logger1#error
+	 */
+	public void error(String text){
+		System.out.println(text);
+	}
+}
