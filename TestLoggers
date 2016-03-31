@@ -9,7 +9,7 @@ import java.util.logging.Logger;
  *
  */
 public class TestLoggers {
-
+	
 	/**
 	 * 
 	 */
@@ -27,8 +27,9 @@ public class TestLoggers {
 		logger1.debug("This is a debug message");
 		logger1.warn("This is a warning message");
 		logger1.error("This an error message");
-		logger1.warn("-----------------------------");
+		logger1.warn("------------------------------------------------");
 		logger1.warn("");
+		//System.out.println("");
 	}
 	
 	/**
@@ -37,7 +38,15 @@ public class TestLoggers {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Logger1 logger1 = new StandardLogger(); 
+		Logger1 logger2 = new DetailLogger();
+		logger1.setLevel(Level.WARN);
 		testLogging(logger1);
+		logger1.setLevel(Level.INFO);
+		testLogging(logger1);
+		logger2.setLevel(Level.WARN);
+		testLogging(logger2);
+		logger2.setLevel(Level.INFO);
+		testLogging(logger2);
 	}
 
 }

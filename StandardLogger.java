@@ -29,7 +29,7 @@ public class StandardLogger implements Logger1 {
 	 */
 	public StandardLogger() {
 		// TODO Auto-generated constructor stub
-		setLevel(Level.WARN);
+		setLevel(Level.INFO);
 	}
 
 	@Override
